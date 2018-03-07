@@ -1,0 +1,24 @@
+{
+  "globals": {
+    "form_recipient": "info@thomasdeitz.com",
+    "title": "TheRevMo",
+    "description": "TheRevMo's Musings",
+    "main_navigation": [
+      {
+        "href":"",
+        "label":"Home",
+        "title":"Back to the homepage."
+      },
+      {
+        "href":"the-story",
+        "label":"Our Story",
+        "title":"Get the whole story."
+      },
+      {
+        "href":"the-author",
+        "label":"Author",
+        "title":"About the Author"
+      }
+    ]
+  }
+}
