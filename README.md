@@ -3,4 +3,4 @@
 A statically generated communication platform for TheRevMo built on harpjs.
 
 ### Support
-http://harpjs.com/docs/
+[Harp Documentation](http://harpjs.com/docs/)
