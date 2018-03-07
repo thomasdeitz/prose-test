@@ -1,3 +1,6 @@
 ## TheRevMo
 
-Communication platform for TheRevMo built on harp.js.
+A statically generated communication platform for TheRevMo built on harpjs.
+
+### Support
+http://harpjs.com/docs/
