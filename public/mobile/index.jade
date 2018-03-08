@@ -1,16 +1,30 @@
-- var path = current.path.slice(-2, -1)[0];
+- var path = current.path.slice(-2,-1)[0];
 - var currentLocation = public[path]._contents;
-// - console.log(currentLocation);
-- currentLocation = currentLocation.filter(item => item !== 'index.html');
-// - console.log(currentLocation);
-
+- var currentLocation = currentLocation.filter(item => item !== 'index.html');
+- console.log('blue', currentLocation)
 for location in currentLocation
   h1
     a(href="./#{location}")= location.split('-').join(' ').split('.').slice(0, 1)
-  - var spartial = './'+location.split('.').slice(0, 1);
-  // - != partial(spartial)
-  - var split = partial(spartial).match(/<\s*(\w+\b)(?:(?!<\s*\/\s*\1\b)[\s\S])*<\s*\/\s*\1\s*>|\S+/g);
-  - var p = split.shift();
-  // - console.log('splt:', split);
+  - var thispartial = './'+location.split('.').slice(0, 1);
+  != partial(thispartial)
+  - var split = partial(thispartial).match(/<\s*(\w+\b)(?:(?!<\s*\/\s*\1\b)[\s\S])*<\s*\/\s*\1\s*>|\S+/g);
   for e in split
     != e
+
+- var filter = /(\.html$)/;
+- var replace = /(\.html$)|(^index\.html$)/;
+
+mixin tree(head, tail)
+  for val, key in head
+    if key !== '.git' && key !== '_data'
+      if key == '_contents'
+        each file in val
+          if filter.test(file) && !/^404\.html/.test(file)
+            - file = file.replace(replace, "");
+            li: a(href="#{ tail + file }")= tail + file
+      else
+        mixin tree(val, tail + key + "/")
+
+h1 Sitemap
+ol
+  mixin tree(public, "/")
