@@ -1,0 +1,16 @@
+- var path = current.path.slice(-2, -1)[0];
+- var currentLocation = public[path]._contents;
+// - console.log(currentLocation);
+- currentLocation = currentLocation.filter(item => item !== 'index.html');
+// - console.log(currentLocation);
+
+for location in currentLocation
+  h1
+    a(href="./#{location}")= location.split('-').join(' ').split('.').slice(0, 1)
+  - var spartial = './'+location.split('.').slice(0, 1);
+  // - != partial(spartial)
+  - var split = partial(spartial).match(/<\s*(\w+\b)(?:(?!<\s*\/\s*\1\b)[\s\S])*<\s*\/\s*\1\s*>|\S+/g);
+  - var p = split.shift();
+  // - console.log('splt:', split);
+  for e in split
+    != e
