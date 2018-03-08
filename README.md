@@ -18,7 +18,7 @@ If you haven't yet... visit [prose.io](prose.io) and connect your github account
 
 3. Now just type away using the prose.io editor tools and save your new page.
 
-4. Next lets tell the system a little more about our new page. We are going to do this by creating a _data.json file in in that same folder we just created. navigate to that folder and click the "New File" button again. This time lets name it _data.json. Uses the following as the base for content of that file.
+4. Next lets tell the system a little more about our new page. We are going to do this by creating a _data.json file in in that same folder we just created. navigate to that folder and click the "New File" button again. This time lets name it _data.json. Uses the following as the base for content of that file. once you are done save it.
 ```json
 {
   "index": {
@@ -30,4 +30,10 @@ If you haven't yet... visit [prose.io](prose.io) and connect your github account
   }
 }
 ```
+
+5. Now lets go take a look at what we just built on our [staging](https://test-prose-staging.herokuapp.com/). If there are any issues or typos adjust them using the steps above.
+
+6. Once we are confifdent in out ne content we can deploy it to production by visiting aws.blah blah blah. and finding our instance and clicking the promote button.
+
+**All Set!**
 
