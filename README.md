@@ -1,4 +1,4 @@
-# Pose Test
+# Prose Test
 
 A static website built with care, leveraging jade, sass, harpjs, github, prose.io and aws.
 
