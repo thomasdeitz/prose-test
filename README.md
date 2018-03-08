@@ -24,7 +24,7 @@ If you haven't yet... visit [prose.io](prose.io) and connect your github account
 	"index": {
        "slug": "This is the folder you created this file in.",
        "title": "The new page title",
-       'description': "The description of the new page... no line breaks or funny charachters please.",
+       "description": "The description of the new page... no line breaks or funny charachters please.",
        "category": "The category for new Talking Points",
        "keywords": "These will be used for seo and potentially sorting."
     }
