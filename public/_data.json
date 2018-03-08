@@ -7,5 +7,9 @@
             "Hadley",
             "etc."
         ]
+    },
+    "search": {
+      "title": "Search",
+        "description": "Find what you are looking for."
     }
 }
