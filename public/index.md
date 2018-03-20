@@ -1,4 +1,4 @@
-![word worker]({{site.baseurl}}/public/pexels-photo-374049.jpeg)
+![word worker](./pexels-photo-374049.jpeg)
 
 ## Hey Jake,
  
