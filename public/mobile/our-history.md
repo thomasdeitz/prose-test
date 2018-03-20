@@ -1,13 +1,3 @@
----
-id: 279
-title: Our History
-date: {}
-author: admin
-layout: page
-guid: 'http://www.thomasdeitz.com/othersites/dev/?page_id=279'
-published: true
----
-
 #### OUR HISTORY
 # Patient, collaborative investors, experts at growing small businesses
 We founded Hadley Capital nearly 20 years ago specifically to invest in and grow small businesses. Since that time, we have completed more than 20 acquisitions, partnering with management teams, families and owner/executives to deliver results for our companies and investors.
