@@ -2,14 +2,16 @@
 - var currentLocation = public[path]._contents;
 - var currentLocation = currentLocation.filter(item => item !== 'index.html');
 - console.log('blue', currentLocation)
-for location in currentLocation
-  h1
-    a(href="./#{location}")= location.split('-').join(' ').split('.').slice(0, 1)
-  - var thispartial = './'+location.split('.').slice(0, 1);
-  != partial(thispartial)
-  - var split = partial(thispartial).match(/<\s*(\w+\b)(?:(?!<\s*\/\s*\1\b)[\s\S])*<\s*\/\s*\1\s*>|\S+/g);
-  for e in split
-    != e
+main
+  != partial('index.md')
+aside: ul
+    for location in currentLocation
+      li: a(href="./#{location}")= location.split('-').join(' ').split('.').slice(0, 1)
+  //- var thispartial = './'+location.split('.').slice(0, 1);
+  //!= partial(thispartial)
+  //- var split = partial(thispartial).match(/<\s*(\w+\b)(?:(?!<\s*\/\s*\1\b)[\s\S])*<\s*\/\s*\1\s*>|\S+/g);
+  //for e in split
+  //  != e
 
 - var filter = /(\.html$)/;
 - var replace = /(\.html$)|(^index\.html$)/;
@@ -25,6 +27,6 @@ mixin tree(head, tail)
       else
         mixin tree(val, tail + key + "/")
 
-h1 Sitemap
-ol
-  mixin tree(public, "/")
+//h1 Sitemap
+//ol
+//  mixin tree(public, "/")
