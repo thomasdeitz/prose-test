@@ -1,0 +1,41 @@
+form(method="GET" action="/search")
+  input(type="text" name="q" placeholder="Search titles and tags...")
+  button(type="submit") Search
+
+#searchResults
+
+script(src="https://code.jquery.com/jquery-3.1.1.min.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js")
+script.
+  $( document ).ready(function() {
+
+    SearchResults = function(result) {
+      var buffer="";
+      $.each(result, function(index, val){
+        buffer+=" <li><a href='."+val.name+"'>"+val.name+"</a></li>"; 
+      });
+      return buffer;
+    }
+
+    // Extract the `q` query parameter
+    var queryStringRegex = /[\?&]q=([^&]+)/g;
+    var matches = queryStringRegex.exec(window.location.search);
+    if (matches && matches[1]) {
+      var value = decodeURIComponent(matches[1].replace(/\+/g, "%20"));
+
+      // Load the posts to search
+      $.getJSON("/indexed.json").then(function(posts) {
+        // Remember to include Fuse.js before this script.
+        var fuse = new Fuse(posts, {
+          keys: ["name"] // What we're searching
+        });
+
+        // Run the search
+        var results = fuse.search(value);
+        // Generate markup for the posts, implement SearchResults however you want.
+        var $results = SearchResults(results);
+        // Add the element to the empty <div> from before.
+        $("#searchResults").append($results);
+      });
+    }
+  });
