@@ -1,6 +1,6 @@
 ![word worker](pexels-photo-374049.jpeg)
 
-## Hey Jake,
+## Hey Chip,
  
 Have fun... see what you think!
 
