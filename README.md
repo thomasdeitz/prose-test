@@ -4,7 +4,7 @@ A static website built with care, leveraging jade, sass, harpjs, github, prose.i
 
 ## Connecting
 
-Visit [prose.io](prose.io) and connect your github account. You will need to need to give prose.io access to your account so be sure to have your credentials (username and password) handy.
+Visit [prose.io](prose.io) and connect your GitHub account. You will need to need to give prose.io access to your account so be sure to have your credentials (username and password) handy.
 
 ## Updating
 
@@ -38,5 +38,5 @@ If you haven't yet... visit [prose.io](prose.io) and connect your github account
 **All Set!**
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTEzNzgxNjQsMTA5MjExNzEzNV19
+eyJoaXN0b3J5IjpbLTE2NTg0NjgwODQsMTA5MjExNzEzNV19
 -->
